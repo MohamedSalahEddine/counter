@@ -23,7 +23,7 @@ class Counter extends Component {
              <div>
                 <span className={this.display_badge_color()}>{this.display_count()}</span>
                 <button className="btn btn-secondary m-2" onClick={()=>this.props.onIncrement(this.props.obj)}>+</button>
-                <button className="btn btn-secondary m-2" onClick={this.props.onDecrement}>-</button>
+                <button className="btn btn-secondary m-2" onClick={()=>this.props.onDecrement(this.props.obj)}>-</button>
                 <button className='btn btn-danger m-2' onClick={()=>this.props.onDelete(this.props.obj.id)} >delete</button>
              </div>
         );

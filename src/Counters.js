@@ -22,18 +22,29 @@ class Counters extends Component {
         })
     }
     
+    
+
     handleIncrement=(counter)=>{
-      const counters = [...this.state.counters];
-      const index = counters.indexOf(counter);
-      counters[index] = {...counter};
-      counters[index].value++;
-      this.counters.setState({
-        counters
-      })
+        const counterss = [...this.state.counters];
+        const index = counterss.indexOf(counter);
+        counterss[index]={...counter}
+        counterss[index].value++;
+        this.setState({
+            counters:counterss
+        })
+
+        
     }
 
-    handleDecrement=()=>{
 
+    handleDecrement=(counter)=>{
+        const counterss = [...this.state.counters];
+        const index = counterss.indexOf(counter);
+        counterss[index]={...counter}
+        counterss[index].value--;
+        this.setState({
+            counters:counterss
+        })
     }
 
     handleDelete=(id_obj)=>{
